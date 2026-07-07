@@ -17,7 +17,8 @@ V2 - clone UI cua `https://vtnguyengiap.id.vn/` da duoc hoan thien theo thong ti
 - `assets/css/main.css`: CSS clone da doi mau.
 - `assets/js/main.js`: JS clone, form lien he dung `mailto`, khong con AJAX WordPress.
 - `cv/index.html`: trang CV theo giao dien goc.
-- `cv/Hoang-Phat-CV-SEO.pdf`: PDF placeholder de nut tai CV/iframe khong bi 404. Khi co CV that, thay file nay bang PDF that cung ten.
+- `cv/Hoang-Phat-CV-SEO.html`: file nguon de sua/noi dung CV sau nay.
+- `cv/Hoang-Phat-CV-SEO.pdf`: CV PDF hoan chinh de nut tai CV va iframe tren trang `/cv/` su dung.
 - `du-lich-quy-nhon/index.html`: trang case study.
 - `vung-tau-travel/index.html`: trang case study.
 - `privacy-policy/index.html`: trang phap ly.
