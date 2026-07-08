@@ -190,6 +190,7 @@ ul, ol { list-style: none; }
 .onpage-icon { background: rgba(15,118,110,0.12); color: #5eead4; }
 .content-icon { background: rgba(52,211,153,0.12); color: #34d399; }
 .offpage-icon { background: rgba(249,115,22,0.12); color: #f97316; }
+.wp-icon { background: rgba(99,102,241,0.13); color: #a5b4fc; }
 
 /* ==================== SKILL LEVEL TABLE ==================== */
 .skill-level-table { width: 100%; border-collapse: collapse; }
@@ -508,7 +509,7 @@ body.light-mode .cs-cta-btn { background: rgba(0,0,0,0.04); border-color: rgba(0
 .contact-eyebrow { display: inline-flex; margin-bottom: 12px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--primary-light); }
 .contact-subtitle { font-size: clamp(1.45rem, 2.2vw, 2rem); font-weight: 800; line-height: 1.25; color: #fff; margin-bottom: 14px; }
 .contact-desc { color: rgba(255,255,255,0.68); line-height: 1.8; margin-bottom: 0; max-width: 520px; }
-.contact-highlights { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 26px 0 30px; }
+.contact-highlights { display: grid; grid-template-columns: repeat(auto-fit, minmax(112px, 1fr)); gap: 10px; margin: 26px 0 30px; }
 .contact-highlight { min-width: 0; padding: 14px 12px; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; background: rgba(255,255,255,0.06); }
 .contact-highlight strong { display: block; color: #fff; font-size: 1.05rem; line-height: 1.2; }
 .contact-highlight span { display: block; margin-top: 4px; color: rgba(255,255,255,0.58); font-size: 0.78rem; font-weight: 600; }
