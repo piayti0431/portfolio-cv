@@ -1061,3 +1061,197 @@ body.light-mode .skills.section-alt { background: #f0fdfa; }
     .about-grid { margin-bottom: 44px; }
     .timeline-content { padding: 17px; }
 }
+
+/* ==================== RESPONSIVE HARDENING PASS ==================== */
+@media (max-width: 1024px) {
+    .nav-container { gap: 10px; }
+    .nav-menu { gap: 4px; }
+    .nav-link { padding: 8px 10px; }
+    .hero-content { grid-template-columns: minmax(0, 1fr); }
+    .hero-image { order: -1; }
+    .avatar-wrapper { width: clamp(250px, 38vw, 320px); height: clamp(250px, 38vw, 320px); }
+    .projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .project-img { min-height: 190px; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .contact-info-col,
+    .contact-form-col,
+    body.light-mode .contact-form-col { padding: 32px; }
+}
+
+@media (max-width: 768px) {
+    .btn,
+    .nav-link,
+    .lang-nav-btn,
+    .social-btn,
+    .contact-item,
+    .project-btn,
+    .cvp-dl-btn,
+    .cvp-open-btn { min-height: 44px; }
+
+    .site-header .nav-container,
+    .site-header.scrolled .nav-container,
+    body.light-mode .site-header .nav-container {
+        width: 100%;
+        max-width: none;
+    }
+
+    .nav-logo { min-width: 0; flex: 1 1 auto; }
+    .logo-text { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .nav-right { flex: 0 0 auto; }
+    .nav-toggle {
+        min-width: 44px;
+        min-height: 44px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.08);
+    }
+    .nav-menu {
+        top: 76px;
+        left: 10px;
+        right: 10px;
+        border-radius: 16px;
+        border: 1px solid rgba(255,255,255,0.12);
+        background: rgba(15,23,42,0.96);
+        box-shadow: 0 18px 45px rgba(2,6,23,0.36);
+        padding: 12px;
+    }
+    .nav-menu .nav-link {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255,255,255,0.9);
+        border-radius: 12px;
+    }
+    .site-header.scrolled .nav-menu .nav-link,
+    body.light-mode .site-header .nav-menu .nav-link { color: rgba(255,255,255,0.9); }
+
+    .lang-nav { min-height: 38px; }
+    .lang-nav-btn:not(.active) .lang-code { display: none; }
+    .theme-toggle-3d,
+    .theme-toggle-inner,
+    .theme-face { width: 40px; height: 40px; min-width: 40px; }
+
+    .hero { padding-top: 90px; }
+    .hero-content { gap: 24px; }
+    .hero-image { gap: 14px; padding-top: 6px; }
+    .avatar-wrapper { width: min(68vw, 250px); height: min(68vw, 250px); }
+    .avatar-area { padding: 18px 28px; }
+    .scroll-indicator { margin-top: 0; }
+    .hero-text,
+    .hero-stats,
+    .tools-marquee-wrapper {
+        max-width: min(100%, 390px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hero-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+    .about-badges,
+    .about-btns,
+    .hero-btns { justify-content: center; }
+    .about-badge { white-space: normal; text-align: center; }
+
+    .projects-grid { grid-template-columns: 1fr; }
+    .project-img { min-height: 180px; }
+    .project-info { padding: 18px; }
+    .project-tags { min-height: 0; }
+    .project-metrics {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .metric { min-width: 0; padding: 0 6px; }
+    .metric-label { font-size: 0.64rem; overflow-wrap: anywhere; }
+
+    .contact-info-col,
+    .contact-form-col,
+    body.light-mode .contact-form-col { padding: 24px; }
+    .contact-grid { border-radius: 12px; }
+    .contact-social { display: grid; grid-template-columns: 1fr; }
+    .social-btn { justify-content: center; width: 100%; }
+
+    .cs-page { padding-top: 86px; }
+    .cs-hero { padding-top: 0; }
+    .cs-back { margin-bottom: 24px; min-height: 44px; }
+    .cs-hero-inner,
+    .cs-hero-inner-wide-logo {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+    .cs-logo-shot {
+        max-width: 420px;
+        width: 100%;
+    }
+    .cs-title { font-size: clamp(2rem, 8vw, 2.6rem); overflow-wrap: anywhere; }
+    .cs-metrics-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .cs-metric-card { padding: 18px 10px; }
+    .cs-section { padding: 56px 0; }
+    .cs-fig img,
+    .cs-hero-preview img { border-radius: 12px; }
+
+    .cvp-hero { padding: 104px 20px 34px; }
+    .cvp-back { margin-bottom: 18px; min-height: 44px; }
+    .cvp-hero-info { margin-bottom: 24px; }
+    .cvp-role { line-height: 1.6; }
+    .cvp-actions { display: grid; grid-template-columns: 1fr; }
+    .cvp-actions .btn { width: 100%; justify-content: center; }
+    .cvp-viewer { padding: 24px 16px 48px; }
+    .cvp-card { border-radius: 14px; }
+    .cvp-card-bar { padding: 10px 12px; }
+    .cvp-card-bar-name {
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 420px) {
+    .site-header { padding: 0 8px; }
+    .nav-container { gap: 6px; }
+    .nav-avatar { width: 30px; height: 30px; }
+    .logo-text { font-size: 1.12rem; }
+    .lang-nav-btn { padding: 4px 7px; }
+    .theme-toggle-3d,
+    .theme-toggle-inner,
+    .theme-face { width: 38px; height: 38px; min-width: 38px; }
+
+    .hero-text,
+    .hero-stats,
+    .tools-marquee-wrapper { max-width: 100%; }
+    .hero-btns { display: grid; grid-template-columns: 1fr 1fr; }
+    .hero-btns .btn { width: 100%; }
+    .hero-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .stat-label { letter-spacing: 0.02em; }
+
+    .section-header { margin-bottom: 38px; }
+    .section-title { font-size: clamp(1.65rem, 8vw, 2.1rem); }
+    .timeline { padding-left: 22px; }
+    .timeline-dot { left: -22px; }
+    .skill-level-table td { padding: 12px 6px; font-size: 0.86rem; }
+    .skill-badge { padding: 5px 10px; font-size: 0.68rem; }
+
+    .project-metrics { grid-template-columns: 1fr; gap: 10px; }
+    .metric {
+        border-right: 0;
+        border-bottom: 1px solid var(--gray-border);
+        padding-bottom: 10px;
+    }
+    .metric:last-child { border-bottom: 0; padding-bottom: 0; }
+
+    .contact-info-col,
+    .contact-form-col,
+    body.light-mode .contact-form-col { padding: 20px; }
+    .form-heading h3 { font-size: 1.18rem; }
+
+    .cs-metrics-grid { grid-template-columns: 1fr; }
+    .cs-sol-card,
+    .cs-lesson-item,
+    .cs-content-slot { flex-direction: column; }
+    .cs-screenshot-block { padding: 16px; }
+
+    .cvp-hero { padding-left: 16px; padding-right: 16px; }
+    .cvp-viewer { padding-left: 12px; padding-right: 12px; }
+}
