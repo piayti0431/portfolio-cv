@@ -216,16 +216,15 @@ body.light-mode .skill-badge-pro::before { background: var(--primary); }
 body.light-mode .skill-badge-mid { background: rgba(249,115,22,0.07); color: #ea580c; border-color: rgba(249,115,22,0.18); }
 body.light-mode .skill-badge-mid::before { background: #ea580c; }
 
-/* ==================== SKILL REEL (depth-of-field scroll) ==================== */
-.skill-reel-wrap { position: relative; height: 380px; overflow: hidden; -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%); mask-image: linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%); }
-.sr-arrow { position: absolute; left: 0; top: 50%; transform: translateY(-50%); z-index: 10; pointer-events: none; color: var(--accent); display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; animation: arrowPulse 1.6s ease-in-out infinite; filter: drop-shadow(0 0 8px rgba(249,115,22,0.75)); }
-@keyframes arrowPulse { 0%,100% { transform: translateY(-50%) translateX(0); opacity: 1; } 50% { transform: translateY(-50%) translateX(6px); opacity: 0.65; } }
-.skill-reel { display: flex; flex-direction: column; animation: reelUp 16s linear infinite; padding-left: 54px; }
-.skill-reel-wrap:hover .skill-reel { animation-play-state: paused; }
-.sr-item { font-weight: 700; padding: 8px 0; line-height: 1.2; white-space: nowrap; will-change: filter, font-size, color; }
-@keyframes reelUp { from { transform: translateY(0); } to { transform: translateY(-50%); } }
-body.light-mode .sr-arrow { color: var(--accent); filter: drop-shadow(0 0 6px rgba(249,115,22,0.5)); }
-@media (max-width: 768px) { .skill-reel-wrap { height: 300px; } .skill-reel { padding-left: 44px; } }
+/* ==================== SKILL LIST ==================== */
+.skill-reel-wrap { position: relative; overflow: visible; }
+.sr-arrow { display: none; }
+.skill-reel { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+.sr-item { min-height: 44px; display: flex; align-items: center; padding: 11px 14px; border-radius: 14px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.86); font-size: 0.92rem; font-weight: 700; line-height: 1.35; }
+.sr-item[aria-hidden="true"] { display: none; }
+body.light-mode .sr-item { background: rgba(15,118,110,0.06); border-color: rgba(15,118,110,0.14); color: var(--dark2); }
+@media (max-width: 768px) { .skill-reel { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; } }
+@media (max-width: 420px) { .skill-reel { grid-template-columns: 1fr; } }
 .about-skill-body h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 6px; color: rgba(255,255,255,0.9); }
 .about-skill-body p { font-size: 0.82rem; color: rgba(255,255,255,0.5); line-height: 1.6; }
 
