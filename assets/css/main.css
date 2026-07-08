@@ -10,7 +10,7 @@ ul, ol { list-style: none; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
 /* Skip to content – accessibility & SEO */
-.skip-to-content { position: absolute; top: -100%; left: 16px; background: var(--primary); color: #fff; padding: 10px 20px; border-radius: 0 0 8px 8px; font-weight: 600; font-size: 0.9rem; z-index: 9999; transition: top 0.2s; }
+.skip-to-content { position: absolute; top: -100%; left: 16px; min-height: 44px; display: inline-flex; align-items: center; background: var(--primary); color: #fff; padding: 10px 20px; border-radius: 0 0 8px 8px; font-weight: 600; font-size: 0.9rem; z-index: 9999; transition: top 0.2s; }
 .skip-to-content:focus { top: 0; }
 
 /* Focus visible – accessibility */
@@ -62,15 +62,15 @@ ul, ol { list-style: none; }
 .site-header.scrolled .navbar { padding: 14px 0; }
 .nav-container { max-width: 1180px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; }
 .nav-right { display: flex; align-items: center; gap: 6px; flex: 1; justify-content: flex-end; }
-.nav-logo { font-family: 'Playball', cursive; font-size: 1.5rem; font-weight: 400; display: flex; align-items: center; gap: 8px; flex: 1; flex-shrink: 0; }
+.nav-logo { font-family: 'Playball', cursive; font-size: 1.5rem; font-weight: 400; min-height: 44px; display: flex; align-items: center; gap: 8px; flex: 1; flex-shrink: 0; }
 .logo-text { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; }
 .nav-avatar { width: 30px; height: 30px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(15,118,110,0.5); flex-shrink: 0; transition: var(--transition); }
 .nav-logo:hover .nav-avatar { border-color: rgba(15,118,110,0.9); transform: scale(1.05); }
-.nav-cv-btn { display: inline-flex; align-items: center; gap: 5px; padding: 7px 14px; border-radius: 50px; background: var(--gradient); color: #fff !important; -webkit-text-fill-color: #fff; font-size: 0.78rem; font-weight: 600; white-space: nowrap; letter-spacing: 0.02em; transition: var(--transition); flex-shrink: 0; }
+.nav-cv-btn { display: inline-flex; align-items: center; justify-content: center; gap: 5px; min-height: 44px; padding: 7px 14px; border-radius: 50px; background: var(--gradient); color: #fff !important; -webkit-text-fill-color: #fff; font-size: 0.78rem; font-weight: 600; white-space: nowrap; letter-spacing: 0.02em; transition: var(--transition); flex-shrink: 0; }
 .nav-cv-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(15,118,110,0.4); opacity: 0.92; }
 .nav-cv-btn svg { flex-shrink: 0; }
 .nav-menu { display: flex; align-items: center; gap: 8px; }
-.nav-link { color: rgba(255,255,255,0.85); font-weight: 500; padding: 8px 16px; border-radius: 8px; transition: var(--transition); font-size: 0.92rem; }
+.nav-link { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; color: rgba(255,255,255,0.85); font-weight: 500; padding: 8px 16px; border-radius: 8px; transition: var(--transition); font-size: 0.92rem; }
 .nav-link:hover { color: #fff; background: rgba(255,255,255,0.1); }
 .site-header.scrolled .nav-link { color: var(--dark2); }
 .site-header.scrolled .nav-link:hover { color: var(--primary); background: rgba(15,118,110,0.06); }
@@ -546,8 +546,8 @@ a.contact-item-value:hover { color: var(--primary-light); }
 .contact-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
 
 /* ==================== 3D THEME TOGGLE ==================== */
-.theme-toggle-3d { width: 44px; height: 44px; min-width: 44px; background: none; border: none; padding: 0; cursor: pointer; flex-shrink: 0; margin-left: 0; -webkit-appearance: none; appearance: none; outline: none; perspective: 200px; }
-.theme-toggle-inner { width: 44px; height: 44px; position: relative; transform-style: preserve-3d; transition: transform 0.65s cubic-bezier(0.4,0,0.2,1); }
+.theme-toggle-3d { width: 44px; height: 44px; min-width: 44px; min-height: 44px; background: none; border: none; padding: 0; cursor: pointer; flex-shrink: 0; margin-left: 0; -webkit-appearance: none; appearance: none; outline: none; perspective: 200px; }
+.theme-toggle-inner { width: 44px; height: 44px; min-width: 44px; min-height: 44px; position: relative; transform-style: preserve-3d; transition: transform 0.65s cubic-bezier(0.4,0,0.2,1); }
 .theme-toggle-3d.is-light .theme-toggle-inner { transform: rotateY(180deg); }
 .theme-face { position: absolute; top: 0; left: 0; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
 .theme-face-front { background: radial-gradient(circle at 35% 35%, #1e3a5f, #0f172a); border: 2px solid rgba(15,118,110,0.55); color: #5eead4; box-shadow: 0 0 14px rgba(15,118,110,0.35), inset 0 0 10px rgba(15,118,110,0.1); position: relative; overflow: hidden; }
@@ -573,7 +573,7 @@ a.contact-item-value:hover { color: var(--primary-light); }
 
 /* ==================== NAVBAR LANGUAGE TOGGLE ==================== */
 .lang-nav { display: flex; align-items: center; gap: 0; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 50px; padding: 3px; flex-shrink: 0; }
-.lang-nav-btn { display: flex; align-items: center; gap: 6px; padding: 4px 12px; border-radius: 50px; border: none; background: transparent; color: rgba(255,255,255,0.5); cursor: pointer; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.05em; transition: all 0.25s; white-space: nowrap; line-height: 1; text-decoration: none; }
+.lang-nav-btn { display: flex; align-items: center; justify-content: center; gap: 6px; min-width: 44px; min-height: 44px; padding: 4px 12px; border-radius: 50px; border: none; background: transparent; color: rgba(255,255,255,0.5); cursor: pointer; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.05em; transition: all 0.25s; white-space: nowrap; line-height: 1; text-decoration: none; }
 .lang-nav-btn.active { background: var(--gradient); color: #fff; box-shadow: 0 2px 8px rgba(15,118,110,0.4); }
 .lang-nav-btn:not(.active):hover { color: rgba(255,255,255,0.9); background: rgba(255,255,255,0.08); }
 .lang-flag { position: relative; display: inline-block; width: 17px; height: 12px; border-radius: 2px; overflow: hidden; flex: 0 0 auto; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.42), 0 1px 2px rgba(15,23,42,0.2); }
@@ -770,8 +770,6 @@ body.light-mode .legal-content h2 { color: var(--dark); }
     .nav-right { flex: 0 0 auto; gap: 4px; }
     .logo-text { font-size: 1.35rem; }
     .lang-nav-btn { padding: 4px 8px; font-size: 0.66rem; }
-    .theme-toggle-3d,
-    .theme-toggle-inner { width: 38px; height: 38px; min-width: 38px; }
     .hero { padding-top: 78px; }
     .hero .container,
     .hero-banner,
@@ -829,8 +827,6 @@ body.light-mode .legal-content h2 { color: var(--dark); }
     .logo-text { font-size: 1.2rem; }
     .nav-avatar { width: 28px; height: 28px; }
     .lang-nav-btn { padding: 4px 7px; font-size: 0.62rem; }
-    .theme-toggle-3d,
-    .theme-toggle-inner { width: 34px; height: 34px; min-width: 34px; }
     .banner-script-p,
     .banner-geo-text { font-size: clamp(2.25rem, 13vw, 3.2rem); }
     .hero-name { font-size: clamp(1.5rem, 7.4vw, 1.7rem); }
@@ -1131,9 +1127,6 @@ body.light-mode .skills.section-alt { background: #f0fdfa; }
 
     .lang-nav { min-height: 38px; }
     .lang-nav-btn:not(.active) .lang-code { display: none; }
-    .theme-toggle-3d,
-    .theme-toggle-inner,
-    .theme-face { width: 40px; height: 40px; min-width: 40px; }
 
     .hero { padding-top: 90px; }
     .hero-content { gap: 24px; }
@@ -1215,9 +1208,6 @@ body.light-mode .skills.section-alt { background: #f0fdfa; }
     .nav-avatar { width: 30px; height: 30px; }
     .logo-text { font-size: 1.12rem; }
     .lang-nav-btn { padding: 4px 7px; }
-    .theme-toggle-3d,
-    .theme-toggle-inner,
-    .theme-face { width: 38px; height: 38px; min-width: 38px; }
 
     .hero-text,
     .hero-stats,
