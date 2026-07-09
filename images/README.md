@@ -6,7 +6,7 @@ Thu muc nay luu anh that duoc dung trong portfolio va cac trang case study.
 
 | File | Noi dung |
 | --- | --- |
-| `avatar.jpg` | Anh dai dien Hoang Phat |
+| `IMG_3292.jpeg` | Anh dai dien Hoang Phat |
 
 ## Anh du an Du Lich Quy Nhon
 
