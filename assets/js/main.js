@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var wordRollEl = document.getElementById('wordRoll');
     var rollTexts  = (typeof portfolioStrings !== 'undefined' && portfolioStrings.wordRoll)
         ? portfolioStrings.wordRoll
-        : ['Junior SEO', 'SEO Executive', 'On-page SEO', 'Page Speed SEO'];
+        : ['Junior SEO', 'On-page SEO', 'Page Speed SEO'];
     var rollIdx   = 0;
     var rollTimer;
 
